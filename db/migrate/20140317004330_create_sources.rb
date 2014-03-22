@@ -3,7 +3,7 @@ class CreateSources < ActiveRecord::Migration
     create_table :sources do |t|
       t.string :title
       t.integer :author_id
-      t.integer :isbn
+      t.string :isbn
       t.string :google_id
 
       t.timestamps

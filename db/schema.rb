@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140317004420) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "authors", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140317004420) do
   create_table "sources", force: true do |t|
     t.string   "title"
     t.integer  "author_id"
-    t.integer  "isbn"
+    t.string   "isbn"
     t.string   "google_id"
     t.datetime "created_at"
     t.datetime "updated_at"
